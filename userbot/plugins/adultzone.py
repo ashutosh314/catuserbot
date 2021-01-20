@@ -45,7 +45,7 @@ async def butts(event):
     await event.delete()
     await a.delete()
 
-Cmd_Help("adultzone").add_command(
+Cmd_Help.update (
   'boobs', None, 'Sends a random boobs pic'
 ).add_command(
   'butts', None, 'Sends a random Butt pic'
