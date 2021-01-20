@@ -10,7 +10,7 @@ import requests
 
 from userbot import *
 from userbot.utils import *
-from userbot.cmdhelp import CmdHelp
+from userbot.cmdhelp import CMD_Help
 
 @bot.on(admin_cmd("boobs$"))
 @bot.on(sudo_cmd(pattern="boobs$", allow_sudo=True))
@@ -45,7 +45,7 @@ async def butts(event):
     await event.delete()
     await a.delete()
 
-Cmd_Help.update (
+CMD_Help.update (
   'boobs', None, 'Sends a random boobs pic'
 ).add_command(
   'butts', None, 'Sends a random Butt pic'
