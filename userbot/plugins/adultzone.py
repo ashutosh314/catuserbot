@@ -10,9 +10,9 @@ import requests
 
 from userbot import *
 from userbot.utils import *
-from userbot.cmdhelp import CMD_Help
+from userbot.cmdhelp import CMD_HELP
 
-@bot.on(admin_cmd("boobs$"))
+@bot.on(admin_cmd(pattern="boobs$"))
 @bot.on(sudo_cmd(pattern="boobs$", allow_sudo=True))
 async def boobs(event):
     if not os.path.isdir(Var.TEMP_DOWNLOAD_DIRECTORY):
@@ -29,7 +29,7 @@ async def boobs(event):
     await a.delete()
 
 
-@bot.on(admin_cmd("butts$"))
+@bot.on(admin_cmd(pattern="butts$"))
 @bot.on(sudo_cmd(pattern="butts$", allow_sudo=True))
 async def butts(event):
     if not os.path.isdir(Var.TEMP_DOWNLOAD_DIRECTORY):
@@ -45,7 +45,7 @@ async def butts(event):
     await event.delete()
     await a.delete()
 
-CMD_Help.update (
+CMD_HELP.update(
   'boobs', None, 'Sends a random boobs pic'
 ).add_command(
   'butts', None, 'Sends a random Butt pic'
